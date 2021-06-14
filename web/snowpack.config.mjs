@@ -1,3 +1,5 @@
+console.log(process.env);
+
 export default {
   mount: {
     public: { url: "/", static: true },
