@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function KickCounterForm() {
-  return <div>FORM</div>;
+  return (
+    <form>
+      <button type="submit">Kick</button>
+    </form>
+  );
 }
