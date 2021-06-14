@@ -1,0 +1,11 @@
+{
+  "name": "baby-kick-counter",
+  "version": "1.0.0",
+  "description": "Count baby kicks so a pattern can be formed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dylan Pinn <me@dylanpinn.com> (https://dylanpinn.com)",
+  "license": "MIT"
+}
