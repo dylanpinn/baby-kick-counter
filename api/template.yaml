@@ -11,6 +11,10 @@ Globals:
     Timeout: 3
     Tags:
       PROJECT: baby-kick-app
+  Api:
+    Cors:
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
 
 Resources:
   KickCounterFunction:

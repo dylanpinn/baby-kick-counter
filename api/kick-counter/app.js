@@ -16,7 +16,8 @@ exports.lambdaHandler = async (event, context) => {
 
   // Get time from the body.
   const body = JSON.parse(event.body);
-  const kickAt = body.kickAt;
+  console.log(event);
+  const kickAt = Date.parse(body.kickAt).toString();
 
   // Creates a new item.
   const params = {
@@ -29,6 +30,10 @@ exports.lambdaHandler = async (event, context) => {
   const response = {
     statusCode: 200,
     body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
   };
 
   // All log statements are written to CloudWatch

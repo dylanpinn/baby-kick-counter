@@ -4,6 +4,6 @@ export default {
     src: { url: "/dist" },
   },
   env: {
-    API_URL: process.env.API_URL
-  }
+    API_URL: process.env.API_URL || "http://example.com",
+  },
 };

@@ -6,23 +6,24 @@ export default function KickCounterForm() {
     const dateTimeNow = new Date();
     console.log("kick recorded at", dateTimeNow.toLocaleString());
 
-    sendData(Number(dateTimeNow)).then((data) => {
+    sendData(dateTimeNow).then((data) => {
       console.log(data);
     });
   }
 
   async function sendData(kickAt) {
     try {
-      console.log(__SNOWPACK_ENV__);
-      const url = __SNOWPACK_ENV__.SNOWPACK_PUBLIC_API_URL;
       const data = { kickAt };
-      const response = await fetch(url, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://4zntadnggi.execute-api.ap-southeast-2.amazonaws.com/Prod/kick/`,
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       return response.json();
     } catch (e) {
       console.error(e);
