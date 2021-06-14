@@ -19,12 +19,26 @@ Resources:
       CodeUri: kick-counter/
       Handler: app.lambdaHandler
       Runtime: nodejs14.x
+      Policies:
+        - DynamoDBWritePolicy:
+            TableName: !Ref KickCounterTable
+      Environment:
+        Variables:
+          KICK_COUNTER_TABLE: !Ref KickCounterTable
       Events:
         Handler:
           Type: Api
           Properties:
             Path: /kick
             Method: post
+  KickCounterTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: id
+        Type: String
+      Tags:
+        PROJECT: baby-kick-app
 
 Outputs:
   KickApi:
