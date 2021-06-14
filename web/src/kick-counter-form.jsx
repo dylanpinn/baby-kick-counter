@@ -4,16 +4,18 @@ export default function KickCounterForm() {
   function handleSubmit(e) {
     e.preventDefault();
     const dateTimeNow = new Date();
-    console.log("kick recorded at", dateTimeNow.toLocaleString());
+    const kickDate = dateTimeNow.toISOString().split("T")[0];
+    const kickTime = dateTimeNow.toTimeString().split(" ")[0];
+    console.log("kick recorded at", dateTimeNow);
 
-    sendData(dateTimeNow).then((data) => {
+    sendData({ kickDate, kickTime }).then((data) => {
       console.log(data);
     });
   }
 
-  async function sendData(kickAt) {
+  async function sendData({ kickDate, kickTime }) {
     try {
-      const data = { kickAt };
+      const data = { kickDate, kickTime };
       const response = await fetch(
         `https://4zntadnggi.execute-api.ap-southeast-2.amazonaws.com/Prod/kick/`,
         {

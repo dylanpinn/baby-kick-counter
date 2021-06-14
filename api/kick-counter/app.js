@@ -17,12 +17,13 @@ exports.lambdaHandler = async (event, context) => {
   // Get time from the body.
   const body = JSON.parse(event.body);
   console.log(event);
-  const kickAt = Date.parse(body.kickAt).toString();
+  const kickDate = body.kickDate;
+  const kickTime = body.kickTime;
 
   // Creates a new item.
   const params = {
     TableName: tableName,
-    Item: { id: kickAt },
+    Item: { id: `${kickDate} ${kickTime}` },
   };
 
   const result = await docClient.put(params).promise();
