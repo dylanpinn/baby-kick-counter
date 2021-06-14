@@ -3,4 +3,7 @@ export default {
     public: { url: "/", static: true },
     src: { url: "/dist" },
   },
+  env: {
+    API_URL: process.env.API_URL
+  }
 };
