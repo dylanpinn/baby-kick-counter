@@ -9,6 +9,8 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+    Tags:
+      PROJECT: baby-kick-app
 
 Resources:
   KickCounterFunction:
