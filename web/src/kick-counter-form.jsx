@@ -18,7 +18,7 @@ export default function KickCounterForm() {
       const data = { kickAt };
       const response = await fetch(url, {
         method: "POST",
-        body: JOSN.stringify(data),
+        body: JSON.stringify(data),
       });
       return response.json();
     } catch (e) {
