@@ -13,6 +13,7 @@ export default function KickCounterForm() {
 
   async function sendData(kickAt) {
     try {
+      console.log(__SNOWPACK_ENV__);
       const url = __SNOWPACK_ENV__.SNOWPACK_PUBLIC_API_URL;
       const data = { kickAt };
       const response = await fetch(url, {
