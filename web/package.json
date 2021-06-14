@@ -1,8 +1,8 @@
 {
-  "name": "baby-kick-counter",
+  "name": "baby-kick-counter-web",
   "version": "1.0.0",
   "description": "Count baby kicks so a pattern can be formed.",
-  "main": "index.js",
+  "main": "src/index.jsx",
   "scripts": {
     "build": "snowpack build",
     "format": "prettier --write --ignore-unknown .",
@@ -12,7 +12,6 @@
   "author": "Dylan Pinn <me@dylanpinn.com> (https://dylanpinn.com)",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "^2.3.1",
     "snowpack": "^3.5.7"
   },
   "dependencies": {

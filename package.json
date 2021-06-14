@@ -1,0 +1,23 @@
+{
+  "name": "baby-kick-counter",
+  "version": "1.0.0",
+  "description": "Baby Kick Counter (Web + API)",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write --ignore-unknown .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanpinn/baby-kick-counter.git"
+  },
+  "author": "Dylan Pinn <me@dylanpinn.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylanpinn/baby-kick-counter/issues"
+  },
+  "homepage": "https://github.com/dylanpinn/baby-kick-counter#readme",
+  "devDependencies": {
+    "prettier": "^2.3.1"
+  }
+}
