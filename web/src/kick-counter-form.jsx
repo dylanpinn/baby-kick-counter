@@ -34,7 +34,7 @@ export default function KickCounterForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button type="submit">Kick</button>
+      <button type="submit" style={{ width: '80%', height: '100px' }}>Kick</button>
     </form>
   );
 }
