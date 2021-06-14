@@ -13,8 +13,7 @@ export default function KickCounterForm() {
 
   async function sendData(kickAt) {
     try {
-      const url =
-        "https://pg6zk1qbhl.execute-api.ap-southeast-2.amazonaws.com/Prod/kick";
+      const url = process.env.API_URL;
       const data = { kickAt };
       const response = await fetch(url, {
         method: "POST",
