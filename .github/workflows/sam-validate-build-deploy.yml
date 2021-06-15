@@ -53,12 +53,14 @@ jobs:
           echo "The environment is $ENVIRONMENT"
           echo "The branch is $BRANCH"
       - name: SAM Build
+        working-directory: api
         run: |
           sam build
           #      - name: Run unit tests
           #        run: |
           #          python3 -m pytest -s -vvv ./tests/unit/
       - name: SAM Deploy
+        working-directory: api
         run: |
           pwd
           ls
