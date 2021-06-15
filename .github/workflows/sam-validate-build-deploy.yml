@@ -56,9 +56,9 @@ jobs:
         working-directory: api
         run: |
           sam build
-          #      - name: Run unit tests
-          #        run: |
-          #          python3 -m pytest -s -vvv ./tests/unit/
+      - name: Run unit tests
+        run: |
+          echo "Run unit tests here"
       - name: SAM Deploy
         working-directory: api
         run: |
