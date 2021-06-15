@@ -27,6 +27,7 @@ jobs:
           # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: SAM Validate
+        working-directory: web
         run: |
           sam validate
       - name: Configure variables
