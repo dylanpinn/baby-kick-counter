@@ -4,7 +4,9 @@ import KickCounterForm from "./kick-counter-form";
 export default function App() {
   return (
     <React.Fragment>
-      <h1>Let's Count Baby Kicks...</h1>
+      <h1 className="font-sans text-4xl text-center">
+        Let's Count Baby Kicks...
+      </h1>
       <KickCounterForm />
     </React.Fragment>
   );

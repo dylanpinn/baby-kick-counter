@@ -33,8 +33,13 @@ export default function KickCounterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <button type="submit" style={{ width: '80%', height: '100px' }}>Kick</button>
+    <form onSubmit={handleSubmit} className="mt-4 grid justify-items-center">
+      <button
+        type="submit"
+        className="h-12 px-6 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800"
+      >
+        Kick
+      </button>
     </form>
   );
 }
