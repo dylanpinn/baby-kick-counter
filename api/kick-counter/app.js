@@ -23,7 +23,7 @@ exports.lambdaHandler = async (event, context) => {
   // Creates a new item.
   const params = {
     TableName: tableName,
-    Item: { id: `${kickDate} ${kickTime}` },
+    Item: { id: `${kickDate} ${kickTime}`, kickDate, kickTime },
   };
 
   const result = await docClient.put(params).promise();
