@@ -4,6 +4,7 @@ on:
     # branches: [ main ]
     branches: []
 
+concurrency: production_deploy
 jobs:
   sam-validate-build-test-deploy:
     runs-on: ubuntu-latest
